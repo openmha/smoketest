@@ -12,7 +12,7 @@ jobs:
     - name: apt repository for openMHA releases
       run: wget -qO- http://apt.hoertech.de/openmha-packaging.pub | sudo apt-key add - &&
            sudo apt-add-repository 'deb http://apt.hoertech.de/ focal universe' &&
-           sduo apt-add-repository 'deb http://aptdev.hoertech.de/ focal universe' # needed now for bmfwf, remove after next release
+           sudo apt-add-repository 'deb http://aptdev.hoertech.de/ focal universe' # needed now for bmfwf, remove after next release
     - name: install openMHA
       run: sudo apt install -y libopenmha-dev openmha-examples
     - name: show version
