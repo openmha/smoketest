@@ -1,11 +1,11 @@
-name: ovclient_focal
+name: smoke-20.04
 
 on:
   workflow_dispatch:
     
 
 jobs:
-  smoke-20.04:
+  smoke:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
