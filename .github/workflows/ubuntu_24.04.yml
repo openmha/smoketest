@@ -11,7 +11,7 @@ jobs:
       image: ubuntu:24.04
     steps:
     - name: install required packages
-      run: apt-get -y update && apt-get -y install wget gnupg2 sudo software-properties-common
+      run: apt-get -y update && apt-get -y install wget sudo software-properties-common
     - uses: actions/checkout@v2
     - name: apt repository for openMHA releases
       run: wget -qO- http://apt.hoertech.de/openmha-packaging.pub | sudo tee /etc/apt/trusted.gpg.d/openmha-packaging.asc &&
