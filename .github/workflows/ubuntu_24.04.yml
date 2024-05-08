@@ -1,8 +1,10 @@
 name: smoke-24.04
 
 on:
+  schedule:
+    - cron: '46 19 * * *' # every day at 19:46
   workflow_dispatch:
-    
+
 
 jobs:
   smoke:
