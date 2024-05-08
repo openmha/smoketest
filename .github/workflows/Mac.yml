@@ -18,7 +18,7 @@ jobs:
     - name: run
       run: mha nchannels_in=4 srate=16000 fragsize=32 iolib=MHAIOFile io.in=/opt/homebrew/share/openmha/examples/06-binaural-beamformer/2speaker_4ch_16k.wav io.out=/dev/null mhalib=overlapadd mha.plugin_name=bmfwf mha.bmfwf.model_file=/opt/homebrew/share/openmha/examples/34-DNN-based-speech-enhancement/model_bmfwf.pt mha.fftlen=128 mha.wnd.len=64 cmd=start cmd=quit
   smokeIntel:
-    runs-on: macos-14
+    runs-on: macos-12
     steps:
     - uses: actions/checkout@v2
     - name: install openMHA
